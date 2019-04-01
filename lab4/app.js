@@ -18,6 +18,7 @@ console.log("hello world");
 //
 //read file
 //3).
+
 fs.readFile(fileName,(err,data)=>{
 
     if(err){
@@ -60,37 +61,38 @@ http.createServer((req,res)=>
 
 }).listen(3000);
 //add a POST request
-/*
-http.createServer((req,res)=>{
 
+
+//b)
+/*
+http.createServer((req,res) =>
+{
     res.setHeader('Content-Type','text/html');
-    switch (req.method) {
+
+    switch(req.method){
         case 'GET':
-            res.write('<h1>Hello world</h1>');
+            res.write('<h1>Hello World</h1>');
             res.end();
             break;
+
         case 'POST':
-            req.on('data',data=>{
-
-                res.write('<h1>Hello'+data+'</h1>');
+            req.on('data',data =>{
+                res.write('<h1>Hello World'+data+'</h1>');
                 res.end();
-
             });
 
             break;
     }
-
-
-
-
-
-
-}).listen(3000,(err)=>{
-
-    console.log('server is listening to port 3000')
-
+}).listen(3000,(err) =>{
+    console.log('server is listning to port 3000')
 });
 
+
+
+
+
+
+
+
+
 */
-
-
